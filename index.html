@@ -1,0 +1,43 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Medicine Man Deck</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <h1>Medicine Man Deck</h1>
+    <p class="tag">Roadrunner • Snake • Owl (early build)</p>
+  </header>
+
+  <section class="controls">
+    <label>
+      Spread:
+      <select id="spread">
+        <option value="one">Single Card</option>
+        <option value="two">Two Card (Ally • Challenge)</option>
+        <option value="three">Three Card (Past • Present • Bridge)</option>
+      </select>
+    </label>
+    <label class="chk">
+      <input type="checkbox" id="useReversals" />
+      Include reversals
+    </label>
+    <button id="drawBtn">Shuffle & Draw</button>
+  </section>
+
+  <main id="results" aria-live="polite"></main>
+
+  <section id="reading" class="reading"></section>
+
+  <footer>
+    <button id="copyBtn" title="Copy the reading to your clipboard">Copy Reading</button>
+    <a href="data/cards.json" target="_blank" rel="noopener">View cards.json</a>
+    <p class="small">Tip: replace images in <code>assets/</code> with your art files named roadrunner.png, snake.png, owl.png, etc. Add cards in <code>data/cards.json</code>.</p>
+  </footer>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>
